@@ -230,7 +230,7 @@ export default function LandingPage({ setValue, setSelectedIndex }) {
               Save Time. Save Energy. Save Money.
             </Typography>
             <Typography variant="subtitle1">
-              Complete digital solutions, from investigation to{" "}
+              Complete digital solutions, from ideation to{" "}
               <span className={classes.specialText}>celebration.</span>
             </Typography>
             <Button
@@ -340,7 +340,7 @@ export default function LandingPage({ setValue, setSelectedIndex }) {
               Reach More. Discover More. Sell More.
             </Typography>
             <Typography variant="subtitle1">
-              Optimized for Search Engines. Build for speed.
+              Optimized for Search Engines. Built for speed.
             </Typography>
             <Button
               component={Link}

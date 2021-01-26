@@ -1,13 +1,10 @@
-# Next.js example
+# DAS Development Freelance Website
+
+See it [live](https://das-next-js.vercel.app/)
 
 ## How to use
 
-Download the example [or clone the repo](https://github.com/mui-org/material-ui):
-
-```sh
-curl https://codeload.github.com/mui-org/material-ui/tar.gz/master | tar -xz --strip=2  material-ui-master/examples/nextjs
-cd nextjs
-```
+Download the example [or clone the repo](https://github.com/onTheDL/das-nextJS.git):
 
 Install it and run:
 
@@ -16,11 +13,16 @@ npm install
 npm run dev
 ```
 
-or:
+## Stack
 
-[![Edit on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/mui-org/material-ui/tree/master/examples/nextjs)
+- JS, React.js
+- Material UI, Html, CSS
+- Firebase
+- Next.js
 
-## The idea behind the example
 
-[Next.js](https://github.com/zeit/next.js) is a framework for server-rendered React apps.
-# DAS Development
+
+## Contributions
+
+Website design, including Lottie component animations and images, created and contributed by Zach Reece.
+
