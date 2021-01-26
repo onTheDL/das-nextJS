@@ -234,6 +234,7 @@ export default function Header({
             aria-owns={route.ariaOwns}
             aria-haspopup={route.ariaPopup}
             onMouseOver={route.mouseOver}
+            style={{color: '#fff'}}
           />
         ))}
       </Tabs>
