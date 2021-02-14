@@ -355,7 +355,7 @@ export default function Header({
               disableRipple
             >
               <img
-                src="/assets/webdev-logo.svg"
+                src="/assets/dasLogo2.svg"
                 alt="company logo"
                 className={classes.logo}
               />

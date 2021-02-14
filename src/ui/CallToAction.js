@@ -76,7 +76,7 @@ export default function CallToAction({ setValue, setSelectedIndex }) {
               Simple Software. <br /> Exponental Results.
             </Typography>
             <Typography variant="subtitle2" style={{ fontSize: "1.5rem" }}>
-              Leverage the 21st Century to your advantage.
+              Saying something inspirational on this line.
             </Typography>
             <Grid container item justify={matchesSM ? "center" : "undefined"}>
               <Button

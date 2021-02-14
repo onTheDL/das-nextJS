@@ -794,7 +794,7 @@ export default function Estimate({ setValue, setSelectedIndex }) {
           </Typography>
         </Grid>
 
-        <Grid
+        {/* <Grid
           item
           style={{
             marginRight: matchesMD ? 0 : "10em",
@@ -803,7 +803,7 @@ export default function Estimate({ setValue, setSelectedIndex }) {
           }}
         >
           <Lottie options={defaultOptions} height="100%" width="100%" />
-        </Grid>
+        </Grid> */}
       </Grid>
 
       {/*----- WHICH SERVICES SECTION-----*/}

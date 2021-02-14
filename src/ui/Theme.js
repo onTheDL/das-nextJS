@@ -1,6 +1,9 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 
-const dasBlue = '#0B72B9'
+// const dasBlue = '#0B72B9'
+// const dasBlue = '#05436F'
+// const dasBlue = '#000000'
+const dasBlue = '#1D222B'
 const dasOrange = '#FFBA60'
 const dasGrey = '#868686'
 
