@@ -75,6 +75,7 @@ const useStyles = makeStyles((theme) => ({
     ...theme.typography.learnBtn,
     fontSize: "0.7rem",
     height: 35,
+    borderColor: theme.palette.common.orange,
     padding: 8,
     marginTop: "1.5em",
     [theme.breakpoints.down("sm")]: {
@@ -83,7 +84,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   subtitle: {
-    marginBottom: "1em",
+    marginBottom: "0.8em",
+    marginTop: "0.5em"
   },
   icon: {
     marginLeft: "2em",
@@ -165,9 +167,9 @@ export default function LandingPage({ setValue, setSelectedIndex }) {
         <Grid container direction="row" justify="flex-end" alignItems="center">
           <Grid sm item className={classes.heroTextContainer}>
             <Typography variant="h2" align="center">
-              <span className={classes.specialLetter}>D</span>eveloping{" "}
-              <span className={classes.specialLetter}>A</span>wesome{" "}
-              <span className={classes.specialLetter}>S</span>oftware <br />
+              {/* <span className={classes.specialLetter}>D</span>*/}Developing{" "} 
+              {/* <span className={classes.specialLetter}>A</span> */}Awesome{" "}
+              {/* <span className={classes.specialLetter}>S</span>  */}Software <br />
               D.A.S. is good!
             </Typography>
 
@@ -211,7 +213,7 @@ export default function LandingPage({ setValue, setSelectedIndex }) {
 
       <Grid item>
         {" "}
-        {/*-----Custom Development Block-----*/}
+        {/*-----Custom Software Block-----*/}
         <Grid
           container
           direction="row"
@@ -227,12 +229,10 @@ export default function LandingPage({ setValue, setSelectedIndex }) {
           >
             <Typography variant="h4">Custom Software Development</Typography>
             <Typography variant="subtitle1" className={classes.subtitle}>
-              Save Time. Save Energy. Save Money.
+              Save Time. Save Energy. Save Money. <br />
+              <span style={{color: "#868686"}}>Complete digital solutions, from concept to completion.</span>
             </Typography>
-            <Typography variant="subtitle1">
-              Complete digital solutions, from ideation to{" "}
-              <span className={classes.specialText}>celebration.</span>
-            </Typography>
+            
             <Button
               component={Link}
               href="/customsoftware"
@@ -279,12 +279,11 @@ export default function LandingPage({ setValue, setSelectedIndex }) {
           >
             <Typography variant="h4">iOS/Android App Development</Typography>
             <Typography variant="subtitle1" className={classes.subtitle}>
-              Extend Functionality. Extend Access. Increase Engagement.
+              Extend Functionality. Extend Access. Increase Engagement. <br />
+              <span style={{color: "#868686"}}>Integrate your web experience or create a standalone app
+              {matchesSM ? null : <br />} with either mobile platform.</span>
             </Typography>
-            <Typography variant="subtitle1">
-              Integrate your web experience or create a standalone app
-              {matchesSM ? null : <br />} with either mobile platform.
-            </Typography>
+            
             <Button
               component={Link}
               href="/mobileapps"
@@ -337,11 +336,10 @@ export default function LandingPage({ setValue, setSelectedIndex }) {
           >
             <Typography variant="h4">Website Development</Typography>
             <Typography variant="subtitle1" className={classes.subtitle}>
-              Reach More. Discover More. Sell More.
+              Reach More. Discover More. Sell More. <br />
+              <span style={{color: "#868686"}}>Optimized for Search Engines. Built for speed.</span>
             </Typography>
-            <Typography variant="subtitle1">
-              Optimized for Search Engines. Built for speed.
-            </Typography>
+          
             <Button
               component={Link}
               href="/websites"
@@ -400,12 +398,12 @@ export default function LandingPage({ setValue, setSelectedIndex }) {
                     launch party. Non-disclosure agreement value proposition
                     bootstrapping startup creative direct mailing strategy
                     technology funding marketing pitch holy grail influencer.
-                    {/* Branding infographic accelerator first mover advantage stock analytics business-to-business learning curve return on investment bootstrapping. Infographic research & development gamification responsive web design sales traction buyer.  */}
                   </Typography>
                   <Button
                     component={Link}
                     href="/revolution"
                     className={classes.learnBtnHero}
+                    style={{borderColor: '#FFBA60'}}
                     variant="outlined"
                     onClick={() => setValue(2)}
                   >
@@ -497,7 +495,7 @@ export default function LandingPage({ setValue, setSelectedIndex }) {
                     onClick={() => setValue(4)}
                   >
                     <span style={{ marginRight: 10 }}>Learn More</span>
-                    <ButtonArrow width={10} height={10} fill="white" />
+                    <ButtonArrow width={10} height={10} fill='white' />
                   </Button>
                 </Grid>
               </Grid>

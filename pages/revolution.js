@@ -70,7 +70,7 @@ export default function Revolution({ setValue, setSelectedIndex }) {
 
       </Head>
       <Grid item className={classes.rowContainer} style={{ marginTop: "2em" }}>
-        <Typography variant="h2" style={{ fontFamily: "Pacifico" }}>
+        <Typography variant="h2">
           The Revolution
         </Typography>
       </Grid>
@@ -87,19 +87,19 @@ export default function Revolution({ setValue, setSelectedIndex }) {
           <img
             src={vision}
             alt="mountain through binoculars"
-            style={{ maxWidth: "40em", marginRight: "5em" }}
+            style={{ maxWidth: "40em", marginRight: "1em"}}
           />
         </Grid>
 
-        <Grid item container direction="column" lg style={{ maxWidth: "40em" }}>
+        <Grid item container direction="column" lg style={{ maxWidth: "40em", marginRight: "5em" }}>
           <Grid item>
-            <Typography align="right" variant="h4" gutterBottom>
+            <Typography variant="h4" gutterBottom>
               Vision
             </Typography>
           </Grid>
 
           <Grid item>
-            <Typography align="right" variant="body1" paragraph>
+            <Typography variant="body1" paragraph>
               Well, they're your parents, you must know them. What are their
               common interests, what do they like to do together? No, it was The
               Enchantment Under The Sea Dance. Our first date. It was the night
@@ -109,7 +109,7 @@ export default function Revolution({ setValue, setSelectedIndex }) {
             </Typography>
           </Grid>
           <Grid item>
-            <Typography align="right" variant="body1" paragraph>
+            <Typography variant="body1" paragraph>
               Stop it. No, fine, no , good, fine, good. Hello, hello, anybody
               home? Think, McFly, think. I gotta have time to recopy it. Do your
               realize what would happen if I hand in my homework in your
@@ -118,7 +118,7 @@ export default function Revolution({ setValue, setSelectedIndex }) {
             </Typography>
           </Grid>
           <Grid item>
-            <Typography align="right" variant="body1" paragraph>
+            <Typography variant="body1" paragraph>
               It's a board with wheels. Yeah, it's 8:00.
             </Typography>
           </Grid>
@@ -142,6 +142,7 @@ export default function Revolution({ setValue, setSelectedIndex }) {
         direction="row"
         alignItems="center"
         className={classes.rowContainer}
+        style={{marginBottom: "5em", marginTop: "4em"}}
       >
         <Grid item container direction="column" lg style={{ maxWidth: "40em" }}>
           <Grid item>
@@ -177,13 +178,13 @@ export default function Revolution({ setValue, setSelectedIndex }) {
         </Grid>
 
         {/*--- Animation ---*/}
-        <Grid item container justify="flex-end" lg>
+        {/* <Grid item container justify="flex-end" lg>
           <Lottie
             options={defaultOptions}
             isStopped={false}
             style={{ maxWidth: "40em", margin: 0 }}
           />
-        </Grid>
+        </Grid> */}
       </Grid>
 
       {/*----- THE PROCESS SECTION-----*/}

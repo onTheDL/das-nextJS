@@ -10,7 +10,6 @@ const customSoftwareIcon = "/assets/customSoftware.svg";
 const mobileAppsIcon = "/assets/mobileIcon.svg";
 const websiteIcon = "/assets/websiteIcon.svg";
 
-
 const useStyles = makeStyles((theme) => ({
   specialText: {
     fontFamily: "Pacifico",
@@ -21,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "0.7rem",
     height: 35,
     padding: 8,
+    borderColor: theme.palette.common.orange,
     marginTop: "1.5em",
     [theme.breakpoints.down("sm")]: {
       marginBottom: "2em",
@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   subtitle: {
-    marginBottom: "1em",
+    marginBottom: "0.8em",
   },
   icon: {
     marginLeft: "2em",
@@ -51,7 +51,6 @@ export default function Services({ setValue, setSelectedIndex }) {
 
   return (
     <Grid container direction="column">
-      
       {/* SEO */}
       <Head>
         <title key="title">
@@ -96,14 +95,20 @@ export default function Services({ setValue, setSelectedIndex }) {
               width: matchesSM ? undefined : "35em",
             }}
           >
-            <Typography variant="h4">iOS/Android App Development</Typography>
-            <Typography variant="subtitle1" className={classes.subtitle}>
-              Extend Functionality. Extend Access. Increase Engagement.
+            <Typography variant="h4" gutterBottom>
+              iOS/Android App Development
             </Typography>
-            <Typography variant="subtitle1">
+            <Typography variant="subtitle1" className={classes.subtitle}>
+              Extend Functionality. Extend Access. Increase Engagement. <br />
+              <span style={{ color: "#868686" }}>
+                Integrate your web experience or create a standalone app
+                {matchesSM ? null : <br />} with either mobile platform.
+              </span>
+            </Typography>
+            {/* <Typography variant="subtitle1">
               Integrate your web experience or create a standalone app
               {matchesSM ? null : <br />} with either mobile platform.
-            </Typography>
+            </Typography> */}
             <Button
               component={Link}
               href="/mobileapps"
@@ -155,13 +160,14 @@ export default function Services({ setValue, setSelectedIndex }) {
               textAlign: matchesSM ? "center" : undefined,
             }}
           >
-            <Typography variant="h4">Custom Software Development</Typography>
-            <Typography variant="subtitle1" className={classes.subtitle}>
-              Save Time. Save Energy. Save Money.
+            <Typography variant="h4" gutterBottom>
+              Custom Software Development
             </Typography>
-            <Typography variant="subtitle1">
-              Complete digital solutions, from investigation to{" "}
-              <span className={classes.specialText}>celebration.</span>
+            <Typography variant="subtitle1" className={classes.subtitle}>
+              Save Time. Save Energy. Save Money. <br />
+              <span style={{ color: "#868686" }}>
+                Complete digital solutions, from concept to completion.
+              </span>
             </Typography>
             <Button
               component={Link}
@@ -212,11 +218,12 @@ export default function Services({ setValue, setSelectedIndex }) {
           >
             <Typography variant="h4">Website Development</Typography>
             <Typography variant="subtitle1" className={classes.subtitle}>
-              Reach More. Discover More. Sell More.
+              Reach More. Discover More. Sell More. <br />
+              <span style={{ color: "#868686" }}>
+                Optimized for Search Engines. Built for speed.
+              </span>
             </Typography>
-            <Typography variant="subtitle1">
-              Optimized for Search Engines. Build for speed.
-            </Typography>
+
             <Button
               component={Link}
               href="/websites"

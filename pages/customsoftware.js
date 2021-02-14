@@ -118,7 +118,7 @@ export default function CustomSoftware({ setValue, setSelectedIndex }) {
 
         <Grid item container direction="column" className={classes.heading}>
           <Grid item>
-            <Typography align={matchesMD ? "center" : undefined} variant="h2">
+            <Typography align={matchesMD ? "center" : undefined} variant="h2" gutterBottom>
               Custom Software Development
             </Typography>
           </Grid>
@@ -261,7 +261,7 @@ export default function CustomSoftware({ setValue, setSelectedIndex }) {
         >
           <Grid item container direction="column" md>
             <Grid item>
-              <Typography variant="h4" align={matchesSM ? "center" : undefined}>
+              <Typography variant="h4" align={matchesSM ? "center" : undefined} gutterBottom>
                 Digital Documents & Data
               </Typography>
             </Grid>
@@ -281,7 +281,7 @@ export default function CustomSoftware({ setValue, setSelectedIndex }) {
                 paragraph
               >
                 Please note that Einstein's clock is in complete synchronization
-                with my control watch. Hey wait, wait a minute, who are you?
+                with my control watch.
               </Typography>
 
               <Typography
@@ -289,7 +289,7 @@ export default function CustomSoftware({ setValue, setSelectedIndex }) {
                 align={matchesSM ? "center" : undefined}
                 paragraph
               >
-                Whoa, whoa, Biff, what's that? Hey Biff, check out this guy's
+                Hey Biff, check out this guy's
                 life preserver, dork thinks he's gonna drown
               </Typography>
             </Grid>
@@ -322,7 +322,7 @@ export default function CustomSoftware({ setValue, setSelectedIndex }) {
 
           <Grid item container direction="column" md>
             <Grid item>
-              <Typography variant="h4" align={matchesSM ? "center" : "right"}>
+              <Typography variant="h4" align={matchesSM ? "center" : "right"} gutterBottom>
                 Scale
               </Typography>
 
@@ -358,7 +358,7 @@ export default function CustomSoftware({ setValue, setSelectedIndex }) {
             />
           </Grid>
           <Grid item className={classes.itemContainer}>
-            <Typography variant="h4" align="center">
+            <Typography variant="h4" align="center" gutterBottom>
               Root-Cause Analysis
             </Typography>
             <Typography variant="body1" align="center" paragraph>
@@ -394,7 +394,7 @@ export default function CustomSoftware({ setValue, setSelectedIndex }) {
         >
           <Grid item container direction="column" md>
             <Grid item>
-              <Typography variant="h4" align={matchesSM ? "center" : undefined}>
+              <Typography variant="h4" align={matchesSM ? "center" : undefined} gutterBottom>
                 Automation
               </Typography>
 
@@ -455,7 +455,7 @@ export default function CustomSoftware({ setValue, setSelectedIndex }) {
 
           <Grid item container direction="column" md>
             <Grid item>
-              <Typography variant="h4" align={matchesSM ? "center" : "right"}>
+              <Typography variant="h4" align={matchesSM ? "center" : "right"} gutterBottom>
                 User Experience Design
               </Typography>
 

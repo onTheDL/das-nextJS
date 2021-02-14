@@ -234,7 +234,7 @@ export default function Contact({ setValue, setSelectedIndex }) {
                 <img
                   src="/assets/phone.svg"
                   alt="phone"
-                  style={{ marginRight: "0.5em", verticalAlign: "bottom" }}
+                  style={{ marginRight: "0.5em", verticalAlign: "bottom"}}
                 />
               </Grid>
               <Grid item>
