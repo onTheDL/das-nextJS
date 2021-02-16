@@ -16,6 +16,7 @@
     "prop-types": "latest",
     "react": "latest",
     "react-dom": "latest",
+    "react-lazy-load-image-component": "^1.5.1",
     "react-lottie": "^1.2.3"
   },
   "scripts": {

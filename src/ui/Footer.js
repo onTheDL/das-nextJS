@@ -1,6 +1,10 @@
 import React from "react";
 import Link from "../Link";
 import { makeStyles, Grid, Hidden } from "@material-ui/core";
+import {
+  LazyLoadImage,
+  LazyLoadComponent,
+} from "react-lazy-load-image-component";
 
 const useStyles = makeStyles((theme) => ({
   footer: {
@@ -30,16 +34,17 @@ const useStyles = makeStyles((theme) => ({
     margin: "3em",
   },
   icon: {
-    height: "4em",
-    width: "4em",
+    height: "3em",
+    width: "3em",
     [theme.breakpoints.down("xs")]: {
-      height: "2.5em",
-      width: "2.5em",
+      height: "2.2em",
+      width: "2.2em",
     },
   },
   socialContainer: {
     position: "absolute",
     marginTop: "10em",
+    marginRight: "1.5em",
     [theme.breakpoints.down("md")]: {
       marginTop: "4em",
     },
@@ -59,6 +64,7 @@ export default function Footer({
 }) {
   const classes = useStyles();
   return (
+    <LazyLoadComponent>
     <footer className={classes.footer}>
       <Hidden mdDown>
         <Grid container justify="center" className={classes.mainContainer}>
@@ -266,5 +272,6 @@ export default function Footer({
         </Grid>
       </Grid>
     </footer>
+    </LazyLoadComponent>
   );
 }

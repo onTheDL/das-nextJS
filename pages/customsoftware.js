@@ -55,7 +55,7 @@ export default function CustomSoftware({ setValue, setSelectedIndex }) {
 
   const scaleOptions = {
     loop: true,
-    autoplay: false,
+    autoplay: true,
     animationData: scaleAnimation,
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",
@@ -64,7 +64,7 @@ export default function CustomSoftware({ setValue, setSelectedIndex }) {
 
   const automationOptions = {
     loop: true,
-    autoplay: false,
+    autoplay: true,
     animationData: automationAnimation,
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",
@@ -73,7 +73,7 @@ export default function CustomSoftware({ setValue, setSelectedIndex }) {
 
   const uxOptions = {
     loop: true,
-    autoplay: false,
+    autoplay: true,
     animationData: uxAnimation,
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",

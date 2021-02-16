@@ -767,7 +767,7 @@ export default function Estimate({ setValue, setSelectedIndex }) {
   );
 
   return (
-    <Grid container direction="row">
+    <Grid container direction="column">
       <Head>
         <title key="title">
           Free Custom Software Estimate | DAS Development
@@ -779,18 +779,18 @@ export default function Estimate({ setValue, setSelectedIndex }) {
         />
       </Head>
       
-      <Grid
+      {/* <Grid
         item
         container
         direction="column"
         lg
         alignItems={matchesMD ? "center" : undefined}
-      >
+      > */}
         <Grid
           item
-          style={{ marginTop: "2em", marginLeft: matchesMD ? 0 : "5em" }}
+          style={{ marginTop: "5em" }}
         >
-          <Typography variant="h2" align={matchesMD ? "center" : undefined}>
+          <Typography variant="h2" align="center">
             Estimate
           </Typography>
         </Grid>
@@ -805,9 +805,10 @@ export default function Estimate({ setValue, setSelectedIndex }) {
         >
           <Lottie options={defaultOptions} height="100%" width="100%" />
         </Grid> */}
-      </Grid>
+      {/* </Grid> */}
 
       {/*----- WHICH SERVICES SECTION-----*/}
+      
       <Grid
         item
         container
@@ -827,7 +828,7 @@ export default function Estimate({ setValue, setSelectedIndex }) {
                   style={{
                     fontWeight: 500,
                     fontSize: "2.25rem",
-                    marginTop: "5em",
+                    marginTop: "1em",
                     marginLeft: matchesSM ? "1em" : 0,
                     marginRight: matchesSM ? "1em" : 0,
                     lineHeight: 1.25,
@@ -847,18 +848,19 @@ export default function Estimate({ setValue, setSelectedIndex }) {
               </Grid>
 
               {/*---Option Block---*/}
-              <Grid item container>
+              <Grid item container justify='center'>
                 {question.options.map((option, index) => (
                   <Grid
                     item
                     container
                     direction="column"
-                    md
+                    alignSelf="center" // <--
                     key={index}
                     component={Button}
                     onClick={() => handleSelect(option.id)}
                     style={{
                       display: "grid",
+                      maxWidth: "25em",
                       textTransform: "none",
                       marginBottom: matchesSM ? "1.5em" : 0,
                       borderRadius: 0,

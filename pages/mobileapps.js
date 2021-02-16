@@ -178,7 +178,7 @@ export default function MobileApps({ setValue, setSelectedIndex }) {
           <Lottie
             options={defaultOptions}
             style={{ maxWidth: matchesMD ? "15em" : "20em", height: matchesMD ? "20em" : undefined }}
-            isStopped={false}
+            isStopped={true}
           />
         </Grid>
 
@@ -207,15 +207,16 @@ export default function MobileApps({ setValue, setSelectedIndex }) {
       </Grid>
 
       {/*-----ICONS SECTION-----*/}
-      <Grid
+      
+      {/* <Grid
         item
         container
         direction={matchesMD ? "column" : "row"}
         className={classes.rowContainer}
         style={{marginBottom: "15em", display: "grid"}}
-      >
+      > */}
         {/*---Increase Functionality Block---*/}
-        <Grid item container direction="column" alignItems="center" md>
+        {/* <Grid item container direction="column" alignItems="center" md>
           <Grid item>
             <Typography alignItems="center" variant="h4" gutterBottom>
               Increase Functionality
@@ -224,10 +225,10 @@ export default function MobileApps({ setValue, setSelectedIndex }) {
           <Grid item>
             <img src={swiss} alt="swiss army knife" />
           </Grid>
-        </Grid>
+        </Grid> */}
 
         {/*---Extend Access Block---*/}
-        <Grid item container direction="column" alignItems="center" style={{marginTop: matchesMD ? "10em" : 0, marginBottom: matchesMD ? "10em" : 0}} md>
+        {/* <Grid item container direction="column" alignItems="center" style={{marginTop: matchesMD ? "10em" : 0, marginBottom: matchesMD ? "10em" : 0}} md>
           <Grid item>
             <Typography alignItems="center" variant="h4" gutterBottom>
               Extend Access
@@ -240,10 +241,10 @@ export default function MobileApps({ setValue, setSelectedIndex }) {
               style={{ maxWidth: matchesXS ? "20em" : "28em" }}
             />
           </Grid>
-        </Grid>
+        </Grid> */}
         
         {/*---Enhance Engagement Block---*/}
-        <Grid item container direction="column" alignItems="center" md>
+        {/* <Grid item container direction="column" alignItems="center" md>
           <Grid item>
             <Typography alignItems="center" variant="h4" gutterBottom>
               Enhance Engagement
@@ -253,7 +254,7 @@ export default function MobileApps({ setValue, setSelectedIndex }) {
             <img src={engagement} alt="app with notification" />
           </Grid>
         </Grid>
-      </Grid>
+      </Grid> */}
       <Grid item>
         <CallToAction setValue={setValue} setSelectedIndex={setSelectedIndex} />
       </Grid>

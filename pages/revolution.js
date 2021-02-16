@@ -1,14 +1,10 @@
 import React from "react";
-import Head from "next/head"
-import Lottie from "react-lottie";
+import Head from "next/head";
 import CallToAction from "../src/ui/CallToAction";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 import { makeStyles, useTheme } from "@material-ui/core/styles";
-import {
-  Grid,
-  Typography,
-  useMediaQuery,
-} from "@material-ui/core";
+import { Grid, Typography, useMediaQuery } from "@material-ui/core";
 
 import technologyAnimation from "../src/animations/technologyAnimation/data.json";
 
@@ -59,7 +55,7 @@ export default function Revolution({ setValue, setSelectedIndex }) {
   return (
     <Grid container direction="column">
       <Head>
-        <title key='title'>
+        <title key="title">
           The Revolution - Cutting-Edge Software | Arc Development
         </title>
         <meta
@@ -67,12 +63,9 @@ export default function Revolution({ setValue, setSelectedIndex }) {
           key="description"
           content="Visionary insights, coupled with cutting-edge technology, is a recipe for revolution. Get a free online estimate instantly!"
         />
-
       </Head>
       <Grid item className={classes.rowContainer} style={{ marginTop: "2em" }}>
-        <Typography variant="h2">
-          The Revolution
-        </Typography>
+        <Typography variant="h2">The Revolution</Typography>
       </Grid>
 
       {/*-----VISION WITH BINOCULARS SECTION-----*/}
@@ -87,11 +80,17 @@ export default function Revolution({ setValue, setSelectedIndex }) {
           <img
             src={vision}
             alt="mountain through binoculars"
-            style={{ maxWidth: "40em", marginRight: "1em"}}
+            style={{ maxWidth: "40em", marginRight: "1em" }}
           />
         </Grid>
 
-        <Grid item container direction="column" lg style={{ maxWidth: "40em", marginRight: "5em" }}>
+        <Grid
+          item
+          container
+          direction="column"
+          lg
+          style={{ maxWidth: "40em", marginRight: "5em" }}
+        >
           <Grid item>
             <Typography variant="h4" gutterBottom>
               Vision
@@ -142,7 +141,7 @@ export default function Revolution({ setValue, setSelectedIndex }) {
         direction="row"
         alignItems="center"
         className={classes.rowContainer}
-        style={{marginBottom: "5em", marginTop: "4em"}}
+        style={{ marginBottom: "5em", marginTop: "4em" }}
       >
         <Grid item container direction="column" lg style={{ maxWidth: "40em" }}>
           <Grid item>
@@ -256,7 +255,7 @@ export default function Revolution({ setValue, setSelectedIndex }) {
         </Grid>
 
         {/*---Consultation Img---*/}
-        <Grid item lg style={{ alignSelf: "center" }}>
+        <Grid item lg style={{ alignSelf: "flex-start", marginTop: "14em" }}>
           <img src={consultation} alt="handshake" />
         </Grid>
       </Grid>
@@ -298,9 +297,7 @@ export default function Revolution({ setValue, setSelectedIndex }) {
             >
               C'mon, Einy, hey hey boy, get in there, that a boy, in you go, get
               down, that's it. Pretty Mediocre photographic fakery, they cut off
-              your brother's hair. whoa, whoa Doc, stuck here, I can't be stuck
-              here, I got a life in 1985. I got a girl. And Jack Benny is
-              secretary of the Treasury.
+              your brother's hair.
             </Typography>
             <Typography
               variant="body1"
@@ -310,7 +307,7 @@ export default function Revolution({ setValue, setSelectedIndex }) {
               Who the hell is John F. Kennedy? Re-elect Mayor Goldie Wilson.
               Progress is his middle name. What's going on? Where have you been
               all week? Uh, plutonium, wait a minute, are you telling me that
-              this sucker's nuclear? Uh, you mean nobody's asked you?
+              this sucker's nuclear?
             </Typography>
             <Typography
               variant="body1"
@@ -318,14 +315,13 @@ export default function Revolution({ setValue, setSelectedIndex }) {
               paragraph
             >
               Science Fiction Theater. Tab? I can't give you a tab unless you
-              order something. Uh, you mean nobody's asked you? Doc? How about a
-              ride, Mister?
+              order something.
             </Typography>
           </Grid>
         </Grid>
 
         {/*---Mockup Img---*/}
-        <Grid item lg style={{ alignSelf: "center" }}>
+        <Grid item lg style={{ alignSelf: "flex-start", marginTop: "12em" }}>
           <img src={mockup} alt="website design outline" />
         </Grid>
       </Grid>
@@ -368,8 +364,7 @@ export default function Revolution({ setValue, setSelectedIndex }) {
               C'mon, Einy, hey hey boy, get in there, that a boy, in you go, get
               down, that's it. Pretty Mediocre photographic fakery, they cut off
               your brother's hair. whoa, whoa Doc, stuck here, I can't be stuck
-              here, I got a life in 1985. I got a girl. And Jack Benny is
-              secretary of the Treasury.
+              here, I got a life in 1985.
             </Typography>
             <Typography
               variant="body1"
@@ -378,8 +373,7 @@ export default function Revolution({ setValue, setSelectedIndex }) {
             >
               Who the hell is John F. Kennedy? Re-elect Mayor Goldie Wilson.
               Progress is his middle name. What's going on? Where have you been
-              all week? Uh, plutonium, wait a minute, are you telling me that
-              this sucker's nuclear? Uh, you mean nobody's asked you?
+              all week?
             </Typography>
             <Typography
               variant="body1"
@@ -394,7 +388,7 @@ export default function Revolution({ setValue, setSelectedIndex }) {
         </Grid>
 
         {/*---Review Img---*/}
-        <Grid item lg style={{ alignSelf: "center" }}>
+        <Grid item lg style={{ alignSelf: "flex-start", marginTop: "12em" }}>
           <img src={review} alt="magnifying glass" />
         </Grid>
       </Grid>
@@ -463,7 +457,14 @@ export default function Revolution({ setValue, setSelectedIndex }) {
         </Grid>
 
         {/*---Design Img---*/}
-        <Grid item lg style={{ alignSelf: "center" }}>
+        <Grid
+          item
+          lg
+          style={{
+            alignSelf: "flex-start",
+            marginTop: matchesMD ? null : "12em",
+          }}
+        >
           <img src={design} alt="paintbrush with stroke" />
         </Grid>
       </Grid>
@@ -681,7 +682,6 @@ export default function Revolution({ setValue, setSelectedIndex }) {
     </Grid>
   );
 }
-
 
 // {/*---Iterate Block---*/}
 // <Grid

@@ -15,6 +15,11 @@ import ButtonArrow from "../src/ui/ButtonArrow";
 import CallToAction from "../src/ui/CallToAction";
 import animationData from "../src/animations/landinganimation/data";
 
+import {
+  LazyLoadImage,
+  LazyLoadComponent,
+} from "react-lazy-load-image-component";
+
 const customSoftwareIcon = "/assets/customSoftware.svg";
 const mobileAppsIcon = "/assets/mobileIcon.svg";
 const websiteIcon = "/assets/websiteIcon.svg";
@@ -85,7 +90,7 @@ const useStyles = makeStyles((theme) => ({
   },
   subtitle: {
     marginBottom: "0.8em",
-    marginTop: "0.5em"
+    marginTop: "0.5em",
   },
   icon: {
     marginLeft: "2em",
@@ -123,6 +128,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   infoBackground: {
+    position: "absolute",
+    zIndex: -1,
     backgroundImage: `url(${infoBackground})`,
     backgroundPosition: "center",
     backgroundSize: "cover",
@@ -167,9 +174,10 @@ export default function LandingPage({ setValue, setSelectedIndex }) {
         <Grid container direction="row" justify="flex-end" alignItems="center">
           <Grid sm item className={classes.heroTextContainer}>
             <Typography variant="h2" align="center">
-              {/* <span className={classes.specialLetter}>D</span>*/}Developing{" "} 
+              {/* <span className={classes.specialLetter}>D</span>*/}Developing{" "}
               {/* <span className={classes.specialLetter}>A</span> */}Awesome{" "}
-              {/* <span className={classes.specialLetter}>S</span>  */}Software <br />
+              {/* <span className={classes.specialLetter}>S</span>  */}Software{" "}
+              <br />
               D.A.S. is good!
             </Typography>
 
@@ -230,9 +238,11 @@ export default function LandingPage({ setValue, setSelectedIndex }) {
             <Typography variant="h4">Custom Software Development</Typography>
             <Typography variant="subtitle1" className={classes.subtitle}>
               Save Time. Save Energy. Save Money. <br />
-              <span style={{color: "#868686"}}>Complete digital solutions, from concept to completion.</span>
+              <span style={{ color: "#868686" }}>
+                Complete digital solutions, from concept to completion.
+              </span>
             </Typography>
-            
+
             <Button
               component={Link}
               href="/customsoftware"
@@ -253,7 +263,7 @@ export default function LandingPage({ setValue, setSelectedIndex }) {
           </Grid>
 
           <Grid item>
-            <img
+            <LazyLoadImage
               className={classes.icon}
               src={customSoftwareIcon}
               alt="custom software icon"
@@ -280,10 +290,12 @@ export default function LandingPage({ setValue, setSelectedIndex }) {
             <Typography variant="h4">iOS/Android App Development</Typography>
             <Typography variant="subtitle1" className={classes.subtitle}>
               Extend Functionality. Extend Access. Increase Engagement. <br />
-              <span style={{color: "#868686"}}>Integrate your web experience or create a standalone app
-              {matchesSM ? null : <br />} with either mobile platform.</span>
+              <span style={{ color: "#868686" }}>
+                Integrate your web experience or create a standalone app
+                {matchesSM ? null : <br />} with either mobile platform.
+              </span>
             </Typography>
-            
+
             <Button
               component={Link}
               href="/mobileapps"
@@ -309,7 +321,7 @@ export default function LandingPage({ setValue, setSelectedIndex }) {
               marginRight: matchesSM ? 0 : "5em",
             }}
           >
-            <img
+            <LazyLoadImage
               className={classes.icon}
               src={mobileAppsIcon}
               alt="mobile icon"
@@ -337,9 +349,11 @@ export default function LandingPage({ setValue, setSelectedIndex }) {
             <Typography variant="h4">Website Development</Typography>
             <Typography variant="subtitle1" className={classes.subtitle}>
               Reach More. Discover More. Sell More. <br />
-              <span style={{color: "#868686"}}>Optimized for Search Engines. Built for speed.</span>
+              <span style={{ color: "#868686" }}>
+                Optimized for Search Engines. Built for speed.
+              </span>
             </Typography>
-          
+
             <Button
               component={Link}
               href="/websites"
@@ -360,7 +374,7 @@ export default function LandingPage({ setValue, setSelectedIndex }) {
           </Grid>
 
           <Grid item>
-            <img
+            <LazyLoadImage
               className={classes.icon}
               src={websiteIcon}
               alt="website icon"
@@ -373,7 +387,7 @@ export default function LandingPage({ setValue, setSelectedIndex }) {
       <Grid item>
         <Grid
           container
-          style={{ height: "100em", marginTop: "12em" }}
+          style={{ height: "80em", marginTop: "12em" }}
           alignItems="center"
           justify="center"
         >
@@ -403,7 +417,7 @@ export default function LandingPage({ setValue, setSelectedIndex }) {
                     component={Link}
                     href="/revolution"
                     className={classes.learnBtnHero}
-                    style={{borderColor: '#FFBA60'}}
+                    style={{ borderColor: "#FFBA60" }}
                     variant="outlined"
                     onClick={() => setValue(2)}
                   >
@@ -418,17 +432,18 @@ export default function LandingPage({ setValue, setSelectedIndex }) {
               </Grid>
             </CardContent>
           </Card>
-          <div className={classes.revolutionBackground} />
+          <LazyLoadComponent threshold={850}>
+            <div className={classes.revolutionBackground} />
+          </LazyLoadComponent>
         </Grid>
       </Grid>
       {/*----- About and Contact Block -----*/}
       <Grid item>
         <Grid
           container
-          style={{ height: "80em" }}
+          style={{ height: "55.5em" }}
           direction="row"
           alignItems="center"
-          className={classes.infoBackground}
         >
           <Grid
             item
@@ -495,19 +510,27 @@ export default function LandingPage({ setValue, setSelectedIndex }) {
                     onClick={() => setValue(4)}
                   >
                     <span style={{ marginRight: 10 }}>Learn More</span>
-                    <ButtonArrow width={10} height={10} fill='white' />
+                    <ButtonArrow width={10} height={10} fill="white" />
                   </Button>
                 </Grid>
               </Grid>
             </Grid>
           </Grid>
-          {/* <div className={classes.infoBackground} /> */}
+          <LazyLoadComponent threshold={700}>
+            <div className={classes.infoBackground} />
+          </LazyLoadComponent>
         </Grid>
       </Grid>
 
       {/*-----Call to Action Block-----*/}
+
       <Grid item>
-        <CallToAction setValue={setValue} setSelectedIndex={setSelectedIndex} />
+        <LazyLoadComponent threshold={700}>
+          <CallToAction
+            setValue={setValue}
+            setSelectedIndex={setSelectedIndex}
+          />
+        </LazyLoadComponent>
       </Grid>
     </Grid>
   );
