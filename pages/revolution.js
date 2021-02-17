@@ -17,7 +17,6 @@ const design = "/assets/designIcon.svg";
 const build = "/assets/buildIcon.svg";
 const launch = "/assets/launchIcon.svg";
 const maintain = "/assets/maintainIcon.svg";
-const iterate = "/assets/iterateIcon.svg";
 
 const useStyles = makeStyles((theme) => ({
   heading: {
@@ -206,6 +205,7 @@ export default function Revolution({ setValue, setSelectedIndex }) {
         item
         container
         direction="row"
+        justify="center"
         className={classes.rowContainer}
         style={{ backgroundColor: "#B3B3B3", height: "90em" }}
       >
@@ -255,8 +255,8 @@ export default function Revolution({ setValue, setSelectedIndex }) {
         </Grid>
 
         {/*---Consultation Img---*/}
-        <Grid item lg style={{ alignSelf: "flex-start", marginTop: "14em" }}>
-          <img src={consultation} alt="handshake" />
+        <Grid item lg style={{ alignSelf: "flex-start", marginTop: matchesMD ? null : "14em" }}>
+          <img src={consultation} alt="handshake" width="100%" style={{ maxWidth: matchesMD ? "33em" : "40em" }} />
         </Grid>
       </Grid>
 
@@ -265,6 +265,7 @@ export default function Revolution({ setValue, setSelectedIndex }) {
         item
         container
         direction="row"
+        justify="center"
         className={classes.rowContainer}
         style={{ backgroundColor: "#FF7373", height: "90em" }}
       >
@@ -321,8 +322,8 @@ export default function Revolution({ setValue, setSelectedIndex }) {
         </Grid>
 
         {/*---Mockup Img---*/}
-        <Grid item lg style={{ alignSelf: "flex-start", marginTop: "12em" }}>
-          <img src={mockup} alt="website design outline" />
+        <Grid item lg style={{ alignSelf: "flex-start", marginTop: matchesMD ? null : "12em" }}>
+          <img src={mockup} alt="website design outline" width="100%" style={{ maxWidth: matchesMD ? "30em" : "52em" }} />
         </Grid>
       </Grid>
 
@@ -331,6 +332,7 @@ export default function Revolution({ setValue, setSelectedIndex }) {
         item
         container
         direction="row"
+        justify="center"
         className={classes.rowContainer}
         style={{ backgroundColor: "#39B54A", height: "90em" }}
       >
@@ -388,8 +390,8 @@ export default function Revolution({ setValue, setSelectedIndex }) {
         </Grid>
 
         {/*---Review Img---*/}
-        <Grid item lg style={{ alignSelf: "flex-start", marginTop: "12em" }}>
-          <img src={review} alt="magnifying glass" />
+        <Grid item lg style={{ alignSelf: "flex-start", marginTop: matchesMD ? null : "12em" }}>
+          <img src={review} alt="magnifying glass" width="100%" style={{ maxWidth: matchesMD ? "25em" : "35em" }} />
         </Grid>
       </Grid>
 
@@ -462,10 +464,10 @@ export default function Revolution({ setValue, setSelectedIndex }) {
           lg
           style={{
             alignSelf: "flex-start",
-            marginTop: matchesMD ? null : "12em",
+            marginTop: matchesMD ? null : "15em",
           }}
         >
-          <img src={design} alt="paintbrush with stroke" />
+          <img src={design} alt="paintbrush with stroke" width="100%" style={{ maxWidth: matchesMD ? "40em" : "60em" }} />
         </Grid>
       </Grid>
 
@@ -474,6 +476,7 @@ export default function Revolution({ setValue, setSelectedIndex }) {
         item
         container
         direction="row"
+        justify="center"
         className={classes.rowContainer}
         style={{ backgroundColor: "#FBB03B", height: "90em" }}
       >
@@ -533,8 +536,8 @@ export default function Revolution({ setValue, setSelectedIndex }) {
         </Grid>
 
         {/*---Build Img---*/}
-        <Grid item lg style={{ alignSelf: "center" }}>
-          <img src={build} alt="construction site" />
+        <Grid item lg style={{ alignSelf: "flex-start", marginTop: matchesMD ? null : "12.5em" }}>
+          <img src={build} alt="construction site" width="100%" style={{ maxWidth: matchesMD ? "32em" : "70em" }} />
         </Grid>
       </Grid>
 
@@ -543,6 +546,7 @@ export default function Revolution({ setValue, setSelectedIndex }) {
         item
         container
         direction="row"
+        justify="center"
         className={classes.rowContainer}
         style={{ backgroundColor: "#8E45CE", height: "90em" }}
       >
@@ -602,8 +606,8 @@ export default function Revolution({ setValue, setSelectedIndex }) {
         </Grid>
 
         {/*---Launch Img---*/}
-        <Grid item lg style={{ alignSelf: "center" }}>
-          <img src={launch} alt="rocket" />
+        <Grid item lg style={{ alignSelf: "flex-start", marginTop: matchesMD ? null : "12.5em" }}>
+          <img src={launch} alt="rocket" width="100%" style={{ maxWidth: matchesMD ? "6em" : "9em" }} />
         </Grid>
       </Grid>
 
@@ -612,6 +616,7 @@ export default function Revolution({ setValue, setSelectedIndex }) {
         item
         container
         direction="row"
+        justify="center"
         className={classes.rowContainer}
         style={{ backgroundColor: "#29ABE2", height: "90em" }}
       >
@@ -671,8 +676,8 @@ export default function Revolution({ setValue, setSelectedIndex }) {
         </Grid>
 
         {/*---Maintain Img---*/}
-        <Grid item lg style={{ alignSelf: "center" }}>
-          <img src={maintain} alt="wrench tightening bolts" />
+        <Grid item lg style={{ alignSelf: "flex-start", marginTop: matchesMD ? null : "12.5em" }}>
+          <img src={maintain} alt="wrench tightening bolts" width="100%" style={{ maxWidth: matchesMD ? "13em" : "23em" }} />
         </Grid>
       </Grid>
 
