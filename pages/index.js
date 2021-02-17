@@ -117,7 +117,8 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: theme.shadows[10],
     borderRadius: 15,
     padding: "8em",
-    maxWidth: 855,
+    maxWidth: 780,
+    maxHeight: 280,
     [theme.breakpoints.down("sm")]: {
       paddingTop: "8em",
       paddingBottom: "8em",
@@ -134,8 +135,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
-    height: "100%",
-    width: "100%",
+    height: "136.5%",
+    width: "136.5%",
+    marginTop: "2.5em",
   },
   specialLetter: {
     color: theme.palette.common.orange,
@@ -441,7 +443,7 @@ export default function LandingPage({ setValue, setSelectedIndex }) {
       <Grid item>
         <Grid
           container
-          style={{ height: "55.5em" }}
+          style={{ height: "78em" }}
           direction="row"
           alignItems="center"
         >

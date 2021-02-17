@@ -149,9 +149,9 @@ export default function About({ setValue, setSelectedIndex }) {
         {/*---History Img---*/}
         <Grid item container justify="center" lg>
           <img
-            src="/assets/history.svg"
-            alt="quill pen above open book"
-            style={{ maxHeight: matchesMD ? "15em" : "22em" }}
+            src="/assets/road-small.jpg"
+            alt="road"
+            style={{ maxHeight: matchesMD ? "15em" : "20em", marginTop: "5em" }}
           />
         </Grid>
       </Grid>
