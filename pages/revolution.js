@@ -323,7 +323,7 @@ export default function Revolution({ setValue, setSelectedIndex }) {
 
         {/*---Mockup Img---*/}
         <Grid item lg style={{ alignSelf: "flex-start", marginTop: matchesMD ? null : "12em" }}>
-          <img src={mockup} alt="website design outline" width="100%" style={{ maxWidth: matchesMD ? "30em" : "52em" }} />
+          <img src={mockup} alt="website design outline" width="100%" style={{ maxWidth: matchesMD ? "35em" : "52em" }} />
         </Grid>
       </Grid>
 
@@ -400,6 +400,7 @@ export default function Revolution({ setValue, setSelectedIndex }) {
         item
         container
         direction="row"
+        justify="center"
         className={classes.rowContainer}
         style={{ backgroundColor: "#A67A52", height: "90em" }}
       >
@@ -607,7 +608,7 @@ export default function Revolution({ setValue, setSelectedIndex }) {
 
         {/*---Launch Img---*/}
         <Grid item lg style={{ alignSelf: "flex-start", marginTop: matchesMD ? null : "12.5em" }}>
-          <img src={launch} alt="rocket" width="100%" style={{ maxWidth: matchesMD ? "6em" : "9em" }} />
+          <img src={launch} alt="rocket" width="100%" style={{ maxWidth: matchesMD ? "5.5em" : "9em" }} />
         </Grid>
       </Grid>
 
