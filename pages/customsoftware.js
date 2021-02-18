@@ -46,7 +46,7 @@ export default function CustomSoftware({ setValue, setSelectedIndex }) {
 
   const documentsOptions = {
     loop: true,
-    autoplay: false,
+    autoplay: true,
     animationData: documentsAnimation,
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",
@@ -248,6 +248,7 @@ export default function CustomSoftware({ setValue, setSelectedIndex }) {
         direction={matchesMD ? "column" : "row"}
         alignItems={matchesMD ? "center" : undefined}
         justify="space-around"
+        style={{ display: matchesMD ? "grid" : undefined }}
         className={classes.rowContainer}
       >
         {/*---Documents Block---*/}
@@ -380,7 +381,7 @@ export default function CustomSoftware({ setValue, setSelectedIndex }) {
         direction={matchesMD ? "column" : "row"}
         alignItems={matchesMD ? "center" : undefined}
         justify="space-around"
-        style={{ marginBottom: "20em" }}
+        style={{ marginBottom: "20em", display: matchesMD ? "grid" : undefined }}
         className={classes.rowContainer}
       >
         {/*---Automation Block---*/}

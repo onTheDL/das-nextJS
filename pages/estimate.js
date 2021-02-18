@@ -767,7 +767,7 @@ export default function Estimate({ setValue, setSelectedIndex }) {
   );
 
   return (
-    <Grid container direction="column">
+    <Grid container direction="column" style={{display: "grid"}}>
       <Head>
         <title key="title">
           Free Custom Software Estimate | DAS Development

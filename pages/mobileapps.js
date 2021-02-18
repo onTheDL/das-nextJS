@@ -48,7 +48,7 @@ export default function MobileApps({ setValue, setSelectedIndex }) {
 
   const defaultOptions = {
     loop: true,
-    autoplay: false,
+    autoplay: true,
     animationData: integrationAnimation,
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",
@@ -149,7 +149,7 @@ export default function MobileApps({ setValue, setSelectedIndex }) {
         item
         container
         direction={matchesMD ? "column" : "row"}
-        style={{marginTop: "15em", marginBottom: "15em"}}
+        style={{marginTop: "15em", marginBottom: "15em", display: matchesMD ? "grid" : undefined }}
         className={classes.rowContainer}
       >
         {/*---Integration Block---*/}
@@ -178,7 +178,7 @@ export default function MobileApps({ setValue, setSelectedIndex }) {
           <Lottie
             options={defaultOptions}
             style={{ maxWidth: matchesMD ? "15em" : "20em", height: matchesMD ? "20em" : undefined }}
-            isStopped={true}
+            isStopped={false}
           />
         </Grid>
 

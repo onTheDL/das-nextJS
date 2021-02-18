@@ -46,6 +46,7 @@ const useStyles = makeStyles((theme) => ({
   },
   logoContainer: {
     padding: 0,
+    marginLeft: "2em",
     "&:hover": {
       backgroundColor: "transparent",
     },
@@ -355,7 +356,7 @@ export default function Header({
               disableRipple
             >
               <img
-                src="/assets/dasLogo2.svg"
+                src="/assets/logo.svg"
                 alt="company logo"
                 className={classes.logo}
               />

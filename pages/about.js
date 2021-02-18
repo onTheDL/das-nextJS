@@ -29,6 +29,7 @@ export default function About({ setValue, setSelectedIndex }) {
   const classes = useStyles();
   const theme = useTheme();
   const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
+  const matchesLG = useMediaQuery(theme.breakpoints.down("lg"));
 
   return (
     <Grid container direction="column">
@@ -151,7 +152,7 @@ export default function About({ setValue, setSelectedIndex }) {
           <img
             src="/assets/road-small.jpg"
             alt="road"
-            style={{ maxHeight: matchesMD ? "15em" : "20em", marginTop: "5em" }}
+            style={{ maxHeight: matchesLG ? "18em" : matchesMD ? "25em" : "20em", marginTop: "5em" }}
           />
         </Grid>
       </Grid>
