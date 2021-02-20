@@ -22,7 +22,9 @@ npm run dev
 
 
 
-## Contributions
+## Acknoledgements
 
-Website design, including Lottie component animations and images, created and contributed by Zach Reece.
+Design consultation by Linden Laserna.
+Images and Lottie component animations contributed by Zach Reece.
+Logo generated with BrandCrowd.com
 
