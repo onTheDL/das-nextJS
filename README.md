@@ -1,6 +1,6 @@
 # DAS Development Freelance Website
 
-See it [live](https://das-next-js.vercel.app/)
+See it [LIVE](https://das-next-js.vercel.app/)
 
 ## How to use
 
@@ -15,7 +15,7 @@ npm run dev
 
 ## Stack
 
-- JS, React.js
+- Javascript, React.js
 - Material UI, Html, CSS
 - Firebase
 - Next.js
@@ -24,7 +24,7 @@ npm run dev
 
 ## Acknoledgements
 
-- Design consultation by Linden Laserna.
-- Images and Lottie component animations contributed by Zach Reece.
+- Design consultation by Linden Laserna
+- Images and Lottie component animations contributed by Zach Reece
 - Logo generated with BrandCrowd.com
 

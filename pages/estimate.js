@@ -784,8 +784,10 @@ export default function Estimate({ setValue, setSelectedIndex }) {
         />
         <meta
           property="og:url"
+          key="og:url"
           content="https://das-next-js.vercel.app/estimate"
         />
+        {/* <link rel="canonical" key="canonical" href="" /> */}
       </Head>
 
       {/* <Grid

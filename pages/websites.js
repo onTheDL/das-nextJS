@@ -65,8 +65,10 @@ export default function Websites({ setValue, setSelectedIndex }) {
         />
         <meta
           property="og:url"
+          key="og:url"
           content="https://das-next-js.vercel.app/websites"
         />
+        {/* <link rel="canonical" key="canonical" href="" /> */}
       </Head>
       <Grid
         item

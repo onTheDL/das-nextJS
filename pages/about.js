@@ -48,8 +48,10 @@ export default function About({ setValue, setSelectedIndex }) {
         />
         <meta
           property="og:url"
+          key="og:url"
           content="https://das-next-js.vercel.app/about"
         />
+        {/* <link rel="canonical" key="canonical" href="" /> */}
 
       </Head>
 
