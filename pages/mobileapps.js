@@ -1,7 +1,7 @@
 import React from "react";
-import Head from "next/head"
+import Head from "next/head";
 import Lottie from "react-lottie";
-import CallToAction from "../src/ui/CallToAction"
+import CallToAction from "../src/ui/CallToAction";
 import Link from "../src/Link";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import {
@@ -19,8 +19,6 @@ const forwardArrow = "/assets/forwardArrow.svg";
 const swiss = "/assets/swissKnife.svg";
 const access = "/assets/extendAccess.svg";
 const engagement = "/assets/enhanceEngagement.svg";
-
-
 
 const useStyles = makeStyles((theme) => ({
   heading: {
@@ -48,7 +46,7 @@ export default function MobileApps({ setValue, setSelectedIndex }) {
 
   const defaultOptions = {
     loop: true,
-    autoplay: true,
+    autoplay: false,
     animationData: integrationAnimation,
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",
@@ -58,13 +56,22 @@ export default function MobileApps({ setValue, setSelectedIndex }) {
   return (
     <Grid container direction="column">
       <Head>
-        <title key='title'>
+        <title key="title">
           iOS/Android App Design and Development | DAS Development
         </title>
         <meta
           name="description"
           key="description"
-          content="Mobile Apps Made Easy | With our cutting-edge mobile app development process, we build beautifully designed, carefully crafted apps for both iOS and Android."
+          content="Mobile Apps Simplified | With our cutting-edge mobile app development process, we build beautifully designed, carefully crafted apps for both iOS and Android."
+        />
+        <meta
+          property="og:title"
+          content="DAS Development | iOS/Android App Development"
+          key="og:title"
+        />
+        <meta
+          property="og:url"
+          content="https://das-next-js.vercel.app/mobileapps"
         />
       </Head>
       <Grid
@@ -149,24 +156,40 @@ export default function MobileApps({ setValue, setSelectedIndex }) {
         item
         container
         direction={matchesMD ? "column" : "row"}
-        style={{marginTop: "15em", marginBottom: "15em", display: matchesMD ? "grid" : undefined }}
+        style={{
+          marginTop: "15em",
+          marginBottom: "15em",
+          display: matchesMD ? "grid" : undefined,
+        }}
         className={classes.rowContainer}
       >
         {/*---Integration Block---*/}
         <Grid item container direction="column" md>
           <Grid item>
-            <Typography align={matchesMD ? "center" : undefined} variant="h4" gutterBottom>
+            <Typography
+              align={matchesMD ? "center" : undefined}
+              variant="h4"
+              gutterBottom
+            >
               Integration
             </Typography>
           </Grid>
 
           <Grid item>
-            <Typography align={matchesMD ? "center" : undefined} variant="body1" paragraph>
+            <Typography
+              align={matchesMD ? "center" : undefined}
+              variant="body1"
+              paragraph
+            >
               This sounds pretty heavy. So anyway, George, now Lorraine, she
               really likes you. She told me to tell you that she wants you to
               ask her to the Enchantment Under The Sea Dance.
             </Typography>
-            <Typography align={matchesMD ? "center" : undefined} variant="body1" paragraph>
+            <Typography
+              align={matchesMD ? "center" : undefined}
+              variant="body1"
+              paragraph
+            >
               Please, Marty, don't tell me, no man should know too much about
               their own destiny. Oh, if Paul calls me tell him I'm working at
               the boutique late tonight.
@@ -177,27 +200,42 @@ export default function MobileApps({ setValue, setSelectedIndex }) {
         <Grid item md>
           <Lottie
             options={defaultOptions}
-            style={{ maxWidth: matchesMD ? "15em" : "20em", height: matchesMD ? "20em" : undefined }}
-            isStopped={false}
+            style={{
+              maxWidth: matchesMD ? "15em" : "20em",
+              height: matchesMD ? "20em" : undefined,
+            }}
+            isStopped={true}
           />
         </Grid>
 
         {/*----- Cross-Platform Block ------*/}
         <Grid item container direction="column" md>
           <Grid item>
-            <Typography align={matchesMD ? "center" : "right"} variant="h4" gutterBottom>
+            <Typography
+              align={matchesMD ? "center" : "left"}
+              variant="h4"
+              gutterBottom
+            >
               Cross-Platform Support
             </Typography>
           </Grid>
 
           <Grid item>
-            <Typography align={matchesMD ? "center" : "right"} variant="body1" paragraph>
+            <Typography
+              align={matchesMD ? "center" : "left"}
+              variant="body1"
+              paragraph
+            >
               That's for messing up my hair. Does your mom know about tomorrow
               night? Next, please. Yeah, sure, okay. Wait a minute, wait a
               minute, Doc, are you telling me that you built a time machine out
               of a delorean.
             </Typography>
-            <Typography align={matchesMD ? "center" : "right"} variant="body1" paragraph>
+            <Typography
+              align={matchesMD ? "center" : "left"}
+              variant="body1"
+              paragraph
+            >
               Don't worry. As long as you hit that wire with the connecting hook
               at precisely 88 miles per hour, the instance the lightning strikes
               the tower, everything will be fine.
@@ -207,7 +245,7 @@ export default function MobileApps({ setValue, setSelectedIndex }) {
       </Grid>
 
       {/*-----ICONS SECTION-----*/}
-      
+
       {/* <Grid
         item
         container
@@ -215,8 +253,8 @@ export default function MobileApps({ setValue, setSelectedIndex }) {
         className={classes.rowContainer}
         style={{marginBottom: "15em", display: "grid"}}
       > */}
-        {/*---Increase Functionality Block---*/}
-        {/* <Grid item container direction="column" alignItems="center" md>
+      {/*---Increase Functionality Block---*/}
+      {/* <Grid item container direction="column" alignItems="center" md>
           <Grid item>
             <Typography alignItems="center" variant="h4" gutterBottom>
               Increase Functionality
@@ -227,8 +265,8 @@ export default function MobileApps({ setValue, setSelectedIndex }) {
           </Grid>
         </Grid> */}
 
-        {/*---Extend Access Block---*/}
-        {/* <Grid item container direction="column" alignItems="center" style={{marginTop: matchesMD ? "10em" : 0, marginBottom: matchesMD ? "10em" : 0}} md>
+      {/*---Extend Access Block---*/}
+      {/* <Grid item container direction="column" alignItems="center" style={{marginTop: matchesMD ? "10em" : 0, marginBottom: matchesMD ? "10em" : 0}} md>
           <Grid item>
             <Typography alignItems="center" variant="h4" gutterBottom>
               Extend Access
@@ -242,9 +280,9 @@ export default function MobileApps({ setValue, setSelectedIndex }) {
             />
           </Grid>
         </Grid> */}
-        
-        {/*---Enhance Engagement Block---*/}
-        {/* <Grid item container direction="column" alignItems="center" md>
+
+      {/*---Enhance Engagement Block---*/}
+      {/* <Grid item container direction="column" alignItems="center" md>
           <Grid item>
             <Typography alignItems="center" variant="h4" gutterBottom>
               Enhance Engagement

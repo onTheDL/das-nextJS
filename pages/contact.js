@@ -200,6 +200,16 @@ export default function Contact({ setValue, setSelectedIndex }) {
           key="description"
           content="We'll guide you through the custom software design and development process. Send us a message with your ideas or questions to get started!"
         />
+        <meta
+          property="og:title"
+          content="DAS Development | Contact Us"
+          key="og:title"
+        />
+        <meta
+          property="og:url"
+          content="https://das-next-js.vercel.app/contact"
+        />
+
       </Head>
 
       {/*----- FORM SECTION -----*/}
@@ -234,7 +244,7 @@ export default function Contact({ setValue, setSelectedIndex }) {
                 <img
                   src="/assets/phone.svg"
                   alt="phone"
-                  style={{ marginRight: "0.5em", verticalAlign: "bottom"}}
+                  style={{ marginRight: "0.5em", verticalAlign: "bottom" }}
                 />
               </Grid>
               <Grid item>

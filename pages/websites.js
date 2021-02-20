@@ -56,7 +56,16 @@ export default function Websites({ setValue, setSelectedIndex }) {
         <meta
           name="description"
           key="description"
-          content="Completely custom designed and built from scratch to be blazing fast. Optimized code, server-side rendering, and perfect responsive design | 99% PageSpeed Score"
+          content="Blazing fast custom web applications built from scratch. Optimized code, server-side rendering, and perfect responsive design. | 99% PageSpeed Score"
+        />
+        <meta
+          property="og:title"
+          content="DAS Development | Websites"
+          key="og:title"
+        />
+        <meta
+          property="og:url"
+          content="https://das-next-js.vercel.app/websites"
         />
       </Head>
       <Grid

@@ -61,6 +61,15 @@ export default function Services({ setValue, setSelectedIndex }) {
           key="description"
           content="Cutting-edge software, mobile app, and website development services with sleek custom designs - get a free online estimate instantly!"
         />
+        <meta
+          property="og:title"
+          content="DAS Development | Services"
+          key="og:title"
+        />
+        <meta
+          property="og:url"
+          content="https://das-next-js.vercel.app/services"
+        />
       </Head>
 
       <Grid

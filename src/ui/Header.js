@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
   },
   logoContainer: {
     padding: 0,
-    marginLeft: "2em",
+    marginLeft: "1em",
     "&:hover": {
       backgroundColor: "transparent",
     },

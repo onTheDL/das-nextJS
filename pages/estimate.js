@@ -767,7 +767,7 @@ export default function Estimate({ setValue, setSelectedIndex }) {
   );
 
   return (
-    <Grid container direction="column" style={{display: "grid"}}>
+    <Grid container direction="column" style={{ display: "grid" }}>
       <Head>
         <title key="title">
           Free Custom Software Estimate | DAS Development
@@ -775,10 +775,19 @@ export default function Estimate({ setValue, setSelectedIndex }) {
         <meta
           name="description"
           key="description"
-          content="Use our free online estimate calculator to see the cost of your custom software, mobile app, or website design and development project!"
+          content="Use our free online estimate calculator to get the approximate cost of your custom software, mobile app, or website design and development project!"
+        />
+        <meta
+          property="og:title"
+          content="DAS Development | Free Estimate"
+          key="og:title"
+        />
+        <meta
+          property="og:url"
+          content="https://das-next-js.vercel.app/estimate"
         />
       </Head>
-      
+
       {/* <Grid
         item
         container
@@ -786,16 +795,13 @@ export default function Estimate({ setValue, setSelectedIndex }) {
         lg
         alignItems={matchesMD ? "center" : undefined}
       > */}
-        <Grid
-          item
-          style={{ marginTop: "5em" }}
-        >
-          <Typography variant="h2" align="center">
-            Estimate
-          </Typography>
-        </Grid>
+      <Grid item style={{ marginTop: "5em" }}>
+        <Typography variant="h2" align="center">
+          Estimate
+        </Typography>
+      </Grid>
 
-        {/* <Grid
+      {/* <Grid
           item
           style={{
             marginRight: matchesMD ? 0 : "10em",
@@ -808,7 +814,7 @@ export default function Estimate({ setValue, setSelectedIndex }) {
       {/* </Grid> */}
 
       {/*----- WHICH SERVICES SECTION-----*/}
-      
+
       <Grid
         item
         container
@@ -848,7 +854,7 @@ export default function Estimate({ setValue, setSelectedIndex }) {
               </Grid>
 
               {/*---Option Block---*/}
-              <Grid item container justify='center'>
+              <Grid item container justify="center">
                 {question.options.map((option, index) => (
                   <Grid
                     item

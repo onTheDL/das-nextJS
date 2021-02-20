@@ -167,7 +167,16 @@ export default function LandingPage({ setValue, setSelectedIndex }) {
         <meta
           name="description"
           key="description"
-          content="Pristine software custom-designed from the ground up with cutting-edge optimizations. Use our free estimate calculator to check your project cost!"
+          content="Professional software custom-designed from the ground up with cutting-edge optimizations. Use our free estimate calculator to receive an approximate cost!"
+        />
+        <meta
+          property="og:title"
+          content="DAS Development | Homepage"
+          key="og:title"
+        />
+        <meta
+          property="og:url"
+          content="https://das-next-js.vercel.app/"
         />
       </Head>
       <Grid item>

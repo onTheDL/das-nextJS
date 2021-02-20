@@ -60,7 +60,16 @@ export default function Revolution({ setValue, setSelectedIndex }) {
         <meta
           name="description"
           key="description"
-          content="Visionary insights, coupled with cutting-edge technology, is a recipe for revolution. Get a free online estimate instantly!"
+          content="Visionary insights with with cutting-edge technology. Get a free online estimate instantly!"
+        />
+        <meta
+          property="og:title"
+          content="DAS Development | The Revolution"
+          key="og:title"
+        />
+        <meta
+          property="og:url"
+          content="https://das-next-js.vercel.app/revolution"
         />
       </Head>
       <Grid item className={classes.rowContainer} style={{ marginTop: "2em" }}>
@@ -255,8 +264,20 @@ export default function Revolution({ setValue, setSelectedIndex }) {
         </Grid>
 
         {/*---Consultation Img---*/}
-        <Grid item lg style={{ alignSelf: "flex-start", marginTop: matchesMD ? null : "14em" }}>
-          <img src={consultation} alt="handshake" width="100%" style={{ maxWidth: matchesMD ? "33em" : "40em" }} />
+        <Grid
+          item
+          lg
+          style={{
+            alignSelf: "flex-start",
+            marginTop: matchesMD ? null : "14em",
+          }}
+        >
+          <img
+            src={consultation}
+            alt="handshake"
+            width="100%"
+            style={{ maxWidth: matchesMD ? "33em" : "40em" }}
+          />
         </Grid>
       </Grid>
 
@@ -322,8 +343,20 @@ export default function Revolution({ setValue, setSelectedIndex }) {
         </Grid>
 
         {/*---Mockup Img---*/}
-        <Grid item lg style={{ alignSelf: "flex-start", marginTop: matchesMD ? null : "12em" }}>
-          <img src={mockup} alt="website design outline" width="100%" style={{ maxWidth: matchesMD ? "35em" : "52em" }} />
+        <Grid
+          item
+          lg
+          style={{
+            alignSelf: "flex-start",
+            marginTop: matchesMD ? null : "12em",
+          }}
+        >
+          <img
+            src={mockup}
+            alt="website design outline"
+            width="100%"
+            style={{ maxWidth: matchesMD ? "35em" : "52em" }}
+          />
         </Grid>
       </Grid>
 
@@ -390,8 +423,20 @@ export default function Revolution({ setValue, setSelectedIndex }) {
         </Grid>
 
         {/*---Review Img---*/}
-        <Grid item lg style={{ alignSelf: "flex-start", marginTop: matchesMD ? null : "12em" }}>
-          <img src={review} alt="magnifying glass" width="100%" style={{ maxWidth: matchesMD ? "25em" : "35em" }} />
+        <Grid
+          item
+          lg
+          style={{
+            alignSelf: "flex-start",
+            marginTop: matchesMD ? null : "12em",
+          }}
+        >
+          <img
+            src={review}
+            alt="magnifying glass"
+            width="100%"
+            style={{ maxWidth: matchesMD ? "25em" : "35em" }}
+          />
         </Grid>
       </Grid>
 
@@ -468,7 +513,12 @@ export default function Revolution({ setValue, setSelectedIndex }) {
             marginTop: matchesMD ? null : "15em",
           }}
         >
-          <img src={design} alt="paintbrush with stroke" width="100%" style={{ maxWidth: matchesMD ? "40em" : "60em" }} />
+          <img
+            src={design}
+            alt="paintbrush with stroke"
+            width="100%"
+            style={{ maxWidth: matchesMD ? "40em" : "60em" }}
+          />
         </Grid>
       </Grid>
 
@@ -537,8 +587,20 @@ export default function Revolution({ setValue, setSelectedIndex }) {
         </Grid>
 
         {/*---Build Img---*/}
-        <Grid item lg style={{ alignSelf: "flex-start", marginTop: matchesMD ? null : "12.5em" }}>
-          <img src={build} alt="construction site" width="100%" style={{ maxWidth: matchesMD ? "32em" : "70em" }} />
+        <Grid
+          item
+          lg
+          style={{
+            alignSelf: "flex-start",
+            marginTop: matchesMD ? null : "12.5em",
+          }}
+        >
+          <img
+            src={build}
+            alt="construction site"
+            width="100%"
+            style={{ maxWidth: matchesMD ? "32em" : "70em" }}
+          />
         </Grid>
       </Grid>
 
@@ -607,8 +669,20 @@ export default function Revolution({ setValue, setSelectedIndex }) {
         </Grid>
 
         {/*---Launch Img---*/}
-        <Grid item lg style={{ alignSelf: "flex-start", marginTop: matchesMD ? null : "12.5em" }}>
-          <img src={launch} alt="rocket" width="100%" style={{ maxWidth: matchesMD ? "5.5em" : "9em" }} />
+        <Grid
+          item
+          lg
+          style={{
+            alignSelf: "flex-start",
+            marginTop: matchesMD ? null : "12.5em",
+          }}
+        >
+          <img
+            src={launch}
+            alt="rocket"
+            width="100%"
+            style={{ maxWidth: matchesMD ? "5.5em" : "9em" }}
+          />
         </Grid>
       </Grid>
 
@@ -677,8 +751,20 @@ export default function Revolution({ setValue, setSelectedIndex }) {
         </Grid>
 
         {/*---Maintain Img---*/}
-        <Grid item lg style={{ alignSelf: "flex-start", marginTop: matchesMD ? null : "12.5em" }}>
-          <img src={maintain} alt="wrench tightening bolts" width="100%" style={{ maxWidth: matchesMD ? "13em" : "23em" }} />
+        <Grid
+          item
+          lg
+          style={{
+            alignSelf: "flex-start",
+            marginTop: matchesMD ? null : "12.5em",
+          }}
+        >
+          <img
+            src={maintain}
+            alt="wrench tightening bolts"
+            width="100%"
+            style={{ maxWidth: matchesMD ? "13em" : "23em" }}
+          />
         </Grid>
       </Grid>
 

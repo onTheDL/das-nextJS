@@ -41,6 +41,16 @@ export default function About({ setValue, setSelectedIndex }) {
           key="description"
           content="We provide one of the fastest, most modern, affordable, and aesthetic software design and development services in North America. Get a free online estimate now!"
         />
+        <meta
+          property="og:title"
+          content="DAS Development | About Us"
+          key="og:title"
+        />
+        <meta
+          property="og:url"
+          content="https://das-next-js.vercel.app/about"
+        />
+
       </Head>
 
       {/*-----MISSION SECTION-----*/}
@@ -152,7 +162,10 @@ export default function About({ setValue, setSelectedIndex }) {
           <img
             src="/assets/road-small.jpg"
             alt="road"
-            style={{ maxHeight: matchesLG ? "18em" : matchesMD ? "25em" : "20em", marginTop: "5em" }}
+            style={{
+              maxHeight: matchesLG ? "18em" : matchesMD ? "25em" : "20em",
+              marginTop: "5em",
+            }}
           />
         </Grid>
       </Grid>
