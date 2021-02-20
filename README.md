@@ -24,7 +24,7 @@ npm run dev
 
 ## Acknoledgements
 
-Design consultation by Linden Laserna.
-Images and Lottie component animations contributed by Zach Reece.
-Logo generated with BrandCrowd.com
+- Design consultation by Linden Laserna.
+- Images and Lottie component animations contributed by Zach Reece.
+- Logo generated with BrandCrowd.com
 
