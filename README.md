@@ -3,7 +3,7 @@
 ## Overview
 A freelance website that I built to learn Next.js and Material UI.  Features a responsive design, active menu selection, SEO integration, form, form validation, Google Cloud functions, Nodemailer, progress indicator (i.e. loading spinner), Snackbar components (provides brief feedback messages of action performed - e.g. "Message sent"), and cross-browser support.'
 
-See it [LIVE](https://das-next-js.vercel.app/)
+See it [LIVE](https://das-next-js.vercel.app/){:target="_blank"}
 
 ## How to use
 
