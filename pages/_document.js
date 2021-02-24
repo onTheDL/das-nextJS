@@ -14,7 +14,6 @@ export default class MyDocument extends Document {
             name="viewport"
             content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
           />
-          {/* Enter tab logo here */}
 
           {/* PWA primary color */}
           <meta name="theme-color" content={Theme.palette.primary.main} />
