@@ -74,7 +74,7 @@ export default function MobileApps({ setValue, setSelectedIndex }) {
           key="og:url"
           content="https://das-next-js.vercel.app/mobileapps"
         />
-        {/* <link rel="canonical" key="canonical" href="" /> */}
+        <link rel="canonical" key="canonical" href="https://das-next-js.vercel.app/mobileapps" />
       </Head>
       <Grid
         item

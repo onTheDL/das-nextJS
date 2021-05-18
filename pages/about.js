@@ -51,7 +51,7 @@ export default function About({ setValue, setSelectedIndex }) {
           key="og:url"
           content="https://das-next-js.vercel.app/about"
         />
-        {/* <link rel="canonical" key="canonical" href="" /> */}
+        <link rel="canonical" key="canonical" href="https://das-next-js.vercel.app/about" />
 
       </Head>
 

@@ -179,7 +179,8 @@ export default function LandingPage({ setValue, setSelectedIndex }) {
           key="og:url"
           content="https://das-next-js.vercel.app/"
         />
-        {/* <link rel="canonical" key="canonical" href="" /> */}
+        <link rel="canonical" key="canonical" href="https://das-next-js.vercel.app/" />
+        
       </Head>
       <Grid item>
         {" "}

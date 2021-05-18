@@ -72,7 +72,7 @@ export default function Revolution({ setValue, setSelectedIndex }) {
           key="og:url"
           content="https://das-next-js.vercel.app/revolution"
         />
-        {/* <link rel="canonical" key="canonical" href="" /> */}
+        <link rel="canonical" key="canonical" href="https://das-next-js.vercel.app/revolution" />
       </Head>
       <Grid item className={classes.rowContainer} style={{ marginTop: "2em" }}>
         <Typography variant="h2">The Revolution</Typography>

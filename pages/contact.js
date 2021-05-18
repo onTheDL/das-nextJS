@@ -210,7 +210,7 @@ export default function Contact({ setValue, setSelectedIndex }) {
           key="og:url"
           content="https://das-next-js.vercel.app/contact"
         />
-        {/* <link rel="canonical" key="canonical" href="" /> */}
+        <link rel="canonical" key="canonical" href="https://das-next-js.vercel.app/contact" />
 
       </Head>
 

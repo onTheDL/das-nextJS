@@ -101,7 +101,9 @@ export default function CustomSoftware({ setValue, setSelectedIndex }) {
           key="og:url"
           content="https://das-next-js.vercel.app/customsoftware"
         />
-        {/* <link rel="canonical" key="canonical" href="" /> */}
+        <link rel="canonical" key="canonical" href="https://das-next-js.vercel.app/customsoftware" />
+
+
       </Head>
       <Grid
         item
