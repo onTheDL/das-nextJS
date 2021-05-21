@@ -69,7 +69,7 @@ export default function Footer({
       <Hidden mdDown>
         <Grid container justify="center" className={classes.mainContainer}>
           <Grid item className={classes.gridItem}>
-            <Grid container direction="column" spacing={2}>
+            <Grid container direction="column" spacing={2} style={{margin: 0}}>
               <Grid
                 item
                 onClick={() => setValue(0)}
@@ -83,7 +83,7 @@ export default function Footer({
           </Grid>
 
           <Grid item className={classes.gridItem}>
-            <Grid container direction="column" spacing={2}>
+            <Grid container direction="column" spacing={2} style={{margin: 0}}>
               <Grid
                 item
                 onClick={() => {
@@ -136,7 +136,7 @@ export default function Footer({
           </Grid>
 
           <Grid item className={classes.gridItem}>
-            <Grid container direction="column" spacing={2}>
+            <Grid container direction="column" spacing={2} style={{margin: 0}}>
               <Grid
                 item
                 onClick={() => setValue(2)}
@@ -177,7 +177,7 @@ export default function Footer({
           </Grid>
 
           <Grid item className={classes.gridItem}>
-            <Grid container direction="column" spacing={2}>
+            <Grid container direction="column" spacing={2} style={{margin: 0}}>
               <Grid
                 item
                 onClick={() => setValue(3)}
@@ -209,7 +209,7 @@ export default function Footer({
           </Grid>
 
           <Grid item className={classes.gridItem}>
-            <Grid container direction="column" spacing={2}>
+            <Grid container direction="column" spacing={2} style={{margin: 0}}>
               <Grid
                 item
                 onClick={() => setValue(4)}
