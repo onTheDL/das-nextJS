@@ -75,7 +75,7 @@ export default function Revolution({ setValue, setSelectedIndex }) {
         <link rel="canonical" key="canonical" href="https://das-next-js.vercel.app/revolution" />
       </Head>
       <Grid item className={classes.rowContainer} style={{ marginTop: "2em" }}>
-        <Typography variant="h2">The Revolution</Typography>
+        <Typography variant="h2" gutterBottom>The Revolution</Typography>
       </Grid>
 
       {/*-----VISION WITH BINOCULARS SECTION-----*/}
@@ -90,7 +90,7 @@ export default function Revolution({ setValue, setSelectedIndex }) {
           <img
             src={vision}
             alt="mountain through binoculars"
-            style={{ maxWidth: "40em", marginRight: "1em" }}
+            style={{ maxWidth: matchesMD ? "30em" : "40em", marginRight: "1em" }}
           />
         </Grid>
 
@@ -99,7 +99,7 @@ export default function Revolution({ setValue, setSelectedIndex }) {
           container
           direction="column"
           lg
-          style={{ maxWidth: "40em", marginRight: "5em" }}
+          style={{ maxWidth: "40em", marginRight: "5em", marginTop: "2em" }}
         >
           <Grid item>
             <Typography variant="h4" gutterBottom>
@@ -437,6 +437,7 @@ export default function Revolution({ setValue, setSelectedIndex }) {
             src={review}
             alt="magnifying glass"
             width="100%"
+            height="80%"
             style={{ maxWidth: matchesMD ? "25em" : "35em" }}
           />
         </Grid>

@@ -371,7 +371,7 @@ export default function CustomSoftware({ setValue, setSelectedIndex }) {
         item
         container
         direction="row"
-        style={{ marginTop: "20em", marginBottom: "20em" }}
+        style={{ marginTop: "18em", marginBottom: "18em" }}
         className={classes.rowContainer}
       >
         <Grid item container direction="column" alignItems="center">
@@ -407,7 +407,7 @@ export default function CustomSoftware({ setValue, setSelectedIndex }) {
         alignItems={matchesMD ? "center" : undefined}
         justify="space-around"
         style={{
-          marginBottom: "20em",
+          marginBottom: "12em",
           display: matchesMD ? "grid" : undefined,
         }}
         className={classes.rowContainer}

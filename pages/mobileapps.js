@@ -159,8 +159,8 @@ export default function MobileApps({ setValue, setSelectedIndex }) {
         container
         direction={matchesMD ? "column" : "row"}
         style={{
-          marginTop: "15em",
-          marginBottom: "15em",
+          marginTop: "12em",
+          marginBottom: "12em",
           display: matchesMD ? "grid" : undefined,
         }}
         className={classes.rowContainer}
