@@ -726,8 +726,11 @@ export default function Estimate({ setValue, setSelectedIndex }) {
     let disabled = true;
 
     const emptySelections = questions
+      .filter(question => question.title !== "Which features do you expect to use?")
       .map((question) => question.options.filter((option) => option.selected))
       .filter((question) => question.length === 0);
+
+    const featuresSelected = questions.filter(question => question.title === "Which features do you expect to use?").map(question => question.options.filter(option => option.selected))
 
     if (questions.length === 2) {
       if (emptySelections.length === 1) {
