@@ -726,24 +726,26 @@ export default function Estimate({ setValue, setSelectedIndex }) {
     let disabled = true;
 
     const emptySelections = questions
-      .filter(question => question.title !== "Which features do you expect to use?")
+      .filter(
+        (question) => question.title !== "Which features do you expect to use?"
+      )
       .map((question) => question.options.filter((option) => option.selected))
       .filter((question) => question.length === 0);
 
-    const featuresSelected = questions.filter(question => question.title === "Which features do you expect to use?").map(question => question.options.filter(option => option.selected))
-
+    const featuresSelected = questions
+      .filter(
+        (question) => question.title === "Which features do you expect to use?"
+      )
+      .map((question) => question.options.filter((option) => option.selected))
+      .filter(selections => selections.length > 0)
+    
     if (questions.length === 2) {
       if (emptySelections.length === 1) {
         disabled = false;
       }
     } else if (questions.length === 1) {
       disabled = true;
-    } else if (
-      emptySelections.length < 3 &&
-      questions[questions.length - 1].options.filter(
-        (option) => option.selected
-      ).length > 0
-    ) {
+    } else if (emptySelections.length === 1 && featuresSelected.length > 0) {
       disabled = false;
     }
 
@@ -790,8 +792,11 @@ export default function Estimate({ setValue, setSelectedIndex }) {
           key="og:url"
           content="https://das-next-js.vercel.app/estimate"
         />
-        <link rel="canonical" key="canonical" href="https://das-next-js.vercel.app/estimate" />
-
+        <link
+          rel="canonical"
+          key="canonical"
+          href="https://das-next-js.vercel.app/estimate"
+        />
       </Head>
 
       {/* <Grid
