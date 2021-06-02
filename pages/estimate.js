@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Head from "next/head";
 import axios from "axios";
 import { cloneDeep } from "lodash";
@@ -344,6 +344,8 @@ export default function Estimate({ setValue, setSelectedIndex }) {
     backgroundColor: "",
   });
 
+  const myRef = useRef(null)
+
   // MEDIA QUERIES
   const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
@@ -359,6 +361,11 @@ export default function Estimate({ setValue, setSelectedIndex }) {
   };
 
   const nextQuestion = () => {
+
+    if (matchesSM) {
+      window.scrollTo(0, myRef.current.offsetTop + 2)
+    }
+
     const newQuestions = cloneDeep(questions);
     const currentlyActive = newQuestions.filter((question) => question.active);
     const activeIndex = currentlyActive[0].id - 1;
@@ -371,6 +378,10 @@ export default function Estimate({ setValue, setSelectedIndex }) {
   };
 
   const previousQuestion = () => {
+    if (matchesSM) {
+      window.scrollTo(0, myRef.current.offsetTop + 75)
+    }
+    
     const newQuestions = cloneDeep(questions);
     const currentlyActive = newQuestions.filter((question) => question.active);
     const activeIndex = currentlyActive[0].id - 1;
@@ -423,16 +434,28 @@ export default function Estimate({ setValue, setSelectedIndex }) {
 
     switch (newSelected.title) {
       case "Custom Software Development":
+        if (matchesSM) {
+          window.scrollTo(0, myRef.current.offsetTop + 75)
+        }
+
         setQuestions(softwareQuestions);
         setService(newSelected.title);
         clearPrevSelect();
         break;
       case "iOS/Android App Development":
+        if (matchesSM) {
+          window.scrollTo(0, myRef.current.offsetTop + 75)
+        }
+
         setQuestions(softwareQuestions);
         setService(newSelected.title);
         clearPrevSelect();
         break;
       case "Website Development":
+        if (matchesSM) {
+          window.scrollTo(0, myRef.current.offsetTop + 75)
+        }
+
         setQuestions(websiteQuestions);
         setService(newSelected.title);
         clearPrevSelect();
@@ -838,7 +861,7 @@ export default function Estimate({ setValue, setSelectedIndex }) {
           .filter((question) => question.active)
           .map((question, index) => (
             <React.Fragment key={index}>
-              <Grid item>
+              <Grid item ref={myRef}>
                 <Typography
                   variant="h2"
                   align="center"
@@ -871,7 +894,7 @@ export default function Estimate({ setValue, setSelectedIndex }) {
                     item
                     container
                     direction="column"
-                    alignSelf="center" // <--
+                    alignself="center" // <--
                     key={index}
                     component={Button}
                     onClick={() => handleSelect(option.id)}
