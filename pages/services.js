@@ -41,6 +41,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       padding: 25,
     },
+    [theme.breakpoints.down("xs")]: {
+      padding: 5,
+    },
   },
 }));
 
@@ -48,6 +51,7 @@ export default function Services({ setValue, setSelectedIndex }) {
   const classes = useStyles();
   const theme = useTheme();
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
+  const matchesXS = useMediaQuery(theme.breakpoints.down("xs"));
 
   return (
     <Grid container direction="column">
@@ -231,7 +235,7 @@ export default function Services({ setValue, setSelectedIndex }) {
             <Typography variant="subtitle1" className={classes.subtitle}>
               Reach More. Discover More. Sell More. <br />
               <span style={{ color: "#868686" }}>
-                Optimized for Search Engines. Built for speed.
+                Optimized for Search Engines. {matchesXS && <br />} Built for speed.
               </span>
             </Typography>
 

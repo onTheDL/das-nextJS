@@ -74,7 +74,11 @@ export default function MobileApps({ setValue, setSelectedIndex }) {
           key="og:url"
           content="https://das-next-js.vercel.app/mobileapps"
         />
-        <link rel="canonical" key="canonical" href="https://das-next-js.vercel.app/mobileapps" />
+        <link
+          rel="canonical"
+          key="canonical"
+          href="https://das-next-js.vercel.app/mobileapps"
+        />
       </Head>
       <Grid
         item
@@ -102,7 +106,12 @@ export default function MobileApps({ setValue, setSelectedIndex }) {
 
         <Grid item container direction="column" className={classes.heading}>
           <Grid item>
-            <Typography align={matchesMD ? "center" : undefined} variant="h2">
+            <Typography
+              align={matchesMD ? "center" : undefined}
+              variant="h2"
+              style={{ lineHeight: matchesXS && 1.1, fontSize: "2.25em " }}
+              gutterBottom
+            >
               iOS/Android App Development
             </Typography>
           </Grid>

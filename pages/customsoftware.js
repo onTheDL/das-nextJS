@@ -134,6 +134,8 @@ export default function CustomSoftware({ setValue, setSelectedIndex }) {
             <Typography
               align={matchesMD ? "center" : undefined}
               variant="h2"
+              style={{ lineHeight: matchesXS && 1.1, fontSize: "2.25em " }}
+              gutterBottom
               gutterBottom
             >
               Custom Software Development
