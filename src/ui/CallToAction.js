@@ -1,9 +1,8 @@
 import React from "react";
-import Link from "../Link"
+import Link from "../Link";
 import { Grid, Typography, Button, useMediaQuery } from "@material-ui/core";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import ButtonArrow from "./ButtonArrow";
-
 
 const useStyles = makeStyles((theme) => ({
   learnBtn: {
@@ -72,10 +71,19 @@ export default function CallToAction({ setValue, setSelectedIndex }) {
       >
         <Grid container direction="column">
           <Grid item>
-            <Typography variant="h2">
-              Simple Software. <br /> Exponental Results.
+            <Typography
+              variant="h2"
+              style={{ lineHeight: matchesSM ? 1.1 : null }}
+              gutterBottom
+            >
+              Simple Software.
+              <br />
+              Exponental Results.
             </Typography>
-            <Typography variant="subtitle2" style={{ fontSize: "1.5rem" }}>
+            <Typography
+              variant="subtitle2"
+              style={{ fontSize: matchesSM ? "1.25rem" : "1.5rem" }}
+            >
               Write something inspirational here.
             </Typography>
             <Grid container item justify={matchesSM ? "center" : "undefined"}>
@@ -84,7 +92,10 @@ export default function CallToAction({ setValue, setSelectedIndex }) {
                 href="/services"
                 variant="outlined"
                 className={classes.learnBtn}
-                onClick={() => {setValue(1); setSelectedIndex(0)}}
+                onClick={() => {
+                  setValue(1);
+                  setSelectedIndex(0);
+                }}
               >
                 <span style={{ marginRight: 5 }}>Learn More</span>
                 <ButtonArrow
