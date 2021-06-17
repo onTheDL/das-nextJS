@@ -84,6 +84,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.common.blue,
     color: "white",
     borderRadius: "0px",
+    zIndex: 1302,
   },
   menuItem: {
     ...theme.typography.tab,
@@ -142,24 +143,24 @@ export default function Header({
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const menuOptions = [
-    { name: "Services", link: "/services", activeIndex: 1, selectedIndex: 0 },
+  
     {
       name: "Custom Software Development",
       link: "/customsoftware",
       activeIndex: 1,
-      selectedIndex: 1,
+      selectedIndex: 0,
     },
     {
       name: "iOS/Android App Development",
       link: "/mobileapps",
       activeIndex: 1,
-      selectedIndex: 2,
+      selectedIndex: 1,
     },
     {
       name: "Website Development",
       link: "/websites",
       activeIndex: 1,
-      selectedIndex: 3,
+      selectedIndex: 2,
     },
   ];
 
@@ -222,6 +223,13 @@ export default function Header({
     setSelectedIndex(i);
   };
 
+  function handleListKeyDown(event) {
+    if (event.key === 'Tab') {
+      event.preventDefault();
+      setOpenMenu(false);
+    }
+  }
+
   const tabs = (
     <>
       <Tabs
@@ -240,6 +248,7 @@ export default function Header({
             aria-owns={route.ariaOwns}
             aria-haspopup={route.ariaPopup}
             onMouseOver={route.mouseOver}
+            onMouseLeave={() => setOpenMenu(false)}
             style={{ color: "#fff" }}
           />
         ))}
@@ -255,8 +264,9 @@ export default function Header({
         Free Estimate
       </Button>
       <Popper
-        open={open}
-        anchorEl={anchorRef.current}
+        open={openMenu}
+        anchorEl={anchorEl}
+        placement="bottom-start"
         role={undefined}
         transition
         disablePortal
@@ -265,27 +275,42 @@ export default function Header({
           <Grow
             {...TransitionProps}
             style={{
-              transformOrigin:
-                placement === "bottom" ? "center top" : "center bottom",
+              transformOrigin: "top-left"
             }}
           >
-            <Paper>
+            <Paper classes={{ root: classes.menu }} elevation={0}>
               <ClickAwayListener onClickAway={handleClose}>
                 <MenuList
-                  autoFocusItem={open}
-                  id="menu-list-grow"
+                  autoFocusItem={false}
+                  id="simple-menu"
                   onKeyDown={handleListKeyDown}
+                  onMouseOver={() => setOpenMenu(true)}
+                  onMouseLeave={handleClose}
+                  disablePadding
                 >
-                  <MenuItem onClick={handleClose}>Profile</MenuItem>
-                  <MenuItem onClick={handleClose}>My account</MenuItem>
-                  <MenuItem onClick={handleClose}>Logout</MenuItem>
+                  {menuOptions.map((option, i) => (
+                    <MenuItem
+                      key={`${option}${i}`}
+                      classes={{ root: classes.menuItem }}
+                      component={Link}
+                      href={option.link}
+                      onClick={(event) => {
+                        handleMenuItemClick(event, i);
+                        setValue(1);
+                        handleClose();
+                      }}
+                      selected={i === selectedIndex && value === 1 && window.location.pathname !== "/services"}
+                    >
+                      {option.name}
+                    </MenuItem>
+                  ))}
                 </MenuList>
               </ClickAwayListener>
             </Paper>
           </Grow>
         )}
       </Popper>
-      <Menu
+      {/* <Menu
         id="simple-menu"
         anchorEl={anchorEl}
         open={openMenu}
@@ -295,24 +320,7 @@ export default function Header({
         style={{ zIndex: 1302 }}
         classes={{ paper: classes.menu }}
         keepMounted
-      >
-        {menuOptions.map((option, i) => (
-          <MenuItem
-            key={`${option}${i}`}
-            classes={{ root: classes.menuItem }}
-            component={Link}
-            href={option.link}
-            onClick={(event) => {
-              handleMenuItemClick(event, i);
-              setValue(1);
-              handleClose();
-            }}
-            selected={i === selectedIndex && value === 1}
-          >
-            {option.name}
-          </MenuItem>
-        ))}
-      </Menu>
+      ></Menu> */}
     </>
   );
 
